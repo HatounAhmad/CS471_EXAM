@@ -1,0 +1,13 @@
+{% load static %}
+    <head>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+    </head>
+<body>
+<h2>Games List</h2>
+<ul>
+    {% for Game in Games_list %}
+        <li> <strong>{{ Game.title }} </strong> by <i>{{ Game.developer.name }} </i></li>
+    {% endfor %}
+</ul>
+<a href="/">Back to Home Page</a>
+</body>
